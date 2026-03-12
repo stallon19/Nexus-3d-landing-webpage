@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS — 3D Bioluminescent HTML5 Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <nav class="nav-pill-container" id="main-nav">
+        <div class="nav-pill">
+            <div class="nav-logo">
+                <span class="logo-text">NX</span>
+            </div>
+            <div class="nav-links">
+                <a href="#hero" class="nav-link active">Overview</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#showcase" class="nav-link">Showcase</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+            </div>
+            <div class="nav-cta">
+                <button class="btn-nexus">Get Nexus</button>
+            </div>
+            <button class="mobile-toggle" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-bg-blobs">
+                <div class="blob blob-1"></div>
+                <div class="blob blob-2"></div>
+                <div class="blob blob-3"></div>
+            </div>
+            
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="label-badge reveal" data-delay="500">
+                        <span class="badge-dot"></span>
+                        <span class="badge-text">✦ Premium HTML Template</span>
+                    </div>
+                    
+                    <h1 class="hero-title" data-split="words">
+                        <div class="line">BUILD</div>
+                        <div class="line highlight">SOMETHING</div>
+                        <div class="line">ALIVE<span class="amber-dot">.</span></div>
+                    </h1>
+                    
+                    <p class="hero-subtext reveal" data-delay="1300">
+                        A fully 3D, organically animated HTML5 template that breathes life into your digital presence.
+                    </p>
+                    
+                    <div class="hero-actions reveal" data-delay="1500">
+                        <a href="#" class="btn-primary">Purchase on Codester</a>
+                        <a href="#" class="btn-secondary">Live Preview →</a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual reveal" data-delay="1700">
+                    <div id="blob-sculpture"></div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <span class="scroll-text">scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <section id="features" class="features-section">
+            <div class="container">
+                <span class="section-label reveal">CAPABILITIES</span>
+                <h2 class="section-title reveal">Every pixel. Every frame. Every interaction.</h2>
+            </div>
+
+            <div class="marquee-wrapper">
+                <div class="marquee-track" id="marquee-track">
+                    <!-- Cards will be duplicated in HTML or JS for seamless loop -->
+                    <div class="feature-panel panel-1">
+                        <span class="panel-num">01</span>
+                        <div class="panel-icon-blob"></div>
+                        <h3>Morphing Geometry</h3>
+                        <p>3D organic shapes that evolve and breathe in real-time</p>
+                    </div>
+                    <div class="feature-panel panel-2">
+                        <span class="panel-num">02</span>
+                        <div class="panel-icon-blob"></div>
+                        <h3>Zero Dependencies</h3>
+                        <p>Pure HTML, CSS and Vanilla JS. No frameworks, no build tools</p>
+                    </div>
+                    <div class="feature-panel panel-3">
+                        <span class="panel-num">03</span>
+                        <div class="panel-icon-blob"></div>
+                        <h3>Scroll Choreography</h3>
+                        <p>Each scroll event triggers a precisely timed visual story</p>
+                    </div>
+                    <div class="feature-panel panel-4">
+                        <span class="panel-num">04</span>
+                        <div class="panel-icon-blob"></div>
+                        <h3>Liquid Interactions</h3>
+                        <p>Hover states that melt and reform like living material</p>
+                    </div>
+                    <div class="feature-panel panel-5">
+                        <span class="panel-num">05</span>
+                        <div class="panel-icon-blob"></div>
+                        <h3>Buyer-Ready</h3>
+                        <p>Fully documented, customizable, Codester-compliant package</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container split-layout">
+                <div class="sticky-side">
+                    <div class="label-badge">
+                        <span class="badge-text">THE TEMPLATE</span>
+                    </div>
+                    <h2 class="section-title">Crafted for developers who demand more.</h2>
+                    <div class="accordion" id="nexus-accordion">
+                        <div class="accordion-item open" data-index="0">
+                            <div class="acc-header">
+                                <span class="acc-num">01</span>
+                                <span class="acc-text">Modular Architecture</span>
+                                <span class="acc-arrow"></span>
+                            </div>
+                            <div class="acc-content">
+                                <p>Each section is a self-contained module, making it incredibly easy to customize and rearrange to fit your specific project needs.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-index="1">
+                            <div class="acc-header">
+                                <span class="acc-num">02</span>
+                                <span class="acc-text">Blob Animation Engine</span>
+                                <span class="acc-arrow"></span>
+                            </div>
+                            <div class="acc-content">
+                                <p>Our proprietary CSS keyframe morphing system simulates organic biological movement without the overhead of heavy animation libraries.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-index="2">
+                            <div class="acc-header">
+                                <span class="acc-num">03</span>
+                                <span class="acc-text">Scroll Storytelling</span>
+                                <span class="acc-arrow"></span>
+                            </div>
+                            <div class="acc-content">
+                                <p>Leveraging IntersectionObserver, NEXUS choreographs high-performance entrance sequences that guide the user through your brand's narrative.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-index="3">
+                            <div class="acc-header">
+                                <span class="acc-num">04</span>
+                                <span class="acc-text">Codester Package Ready</span>
+                                <span class="acc-arrow"></span>
+                            </div>
+                            <div class="acc-content">
+                                <p>Everything you need to ship is included: clean directory structure, commented code, and a comprehensive buyer documentation guide.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-side">
+                    <div class="visual-stack">
+                        <div class="visual-panel panel-back"></div>
+                        <div class="visual-panel panel-mid"></div>
+                        <div class="visual-panel panel-front"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="cta-section">
+            <div class="cta-stage">
+                <div class="cta-blob"></div>
+                <div class="container text-center">
+                    <span class="label-badge amber pulsing">LIMITED TIME</span>
+                    <h2 class="cta-heading" data-split="letters">NEXUS IS WAITING</h2>
+                    <p class="cta-subtext">One purchase. Infinite possibilities. Full source code, documentation, and buyer support.</p>
+                    <div class="price-hex">
+                        <span class="price">€24</span>
+                    </div>
+                    <button class="btn-buy">Buy on Codester Now</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-watermark">NEXUS</div>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">NX</div>
+                <p>Built for creators. Sold on Codester.</p>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p>© 2024 NEXUS Template</p>
+                <div class="social-blobs">
+                    <a href="#" class="social-blob"></a>
+                    <a href="#" class="social-blob"></a>
+                    <a href="#" class="social-blob"></a>
+                </div>
+                <a href="#hero" class="back-to-top">Back to top ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
